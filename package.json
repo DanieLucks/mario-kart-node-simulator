@@ -1,0 +1,12 @@
+{
+  "name": "mario-kart-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "DyLuck Developer",
+  "license": "ISC",
+  "description": "A fun turn-based racing simulator featuring Mario and Luigi, powered by random dice rolls and stats."
+}
