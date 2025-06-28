@@ -1,18 +1,14 @@
-const player1 = {
-    name: "Mario",
-    vel: 4,
-    man: 3,
-    pwr: 3,
-    pts: 0
-};
+const players = require('./players');
 
-const player2 = {
-    name: "Luigi",
-    vel: 2,
-    man: 4,
-    pwr: 4,
-    pts: 0
-};
+
+function getRandomPlayers(list) {
+  const shuffled = [...list].sort(() => Math.random() - 0.5);
+  return [structuredClone(shuffled[0]), structuredClone(shuffled[1])];
+}
+
+const clone = obj => JSON.parse(JSON.stringify(obj));
+const [player1, player2] = getRandomPlayers(players.map(clone));
+
 
 const rollDice = async () => {
     return Math.floor(Math.random() * 6) + 1;
